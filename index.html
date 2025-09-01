@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Teenage Life Tips</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">Teenage Life Tips</div>
+      <div class="controls">
+        <button id="randomBtn" class="btn">🎲 Random</button>
+        <button id="clearFilters" class="btn ghost">Reset</button>
+      </div>
+    </div>
+
+    <div class="grid">
+      <section class="col-8">
+        <div class="card">
+          <div class="card-header">
+            <div class="muted">Search</div>
+            <div class="controls">
+              <input id="search" type="search" placeholder="Search tips (e.g., study, sleep, money, social)...">
+            </div>
+          </div>
+          <div class="card-body">
+            <div id="tips" class="tips"></div>
+            <div id="empty" class="empty" style="display:none">No tips match. Try clearing search.</div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="col-4">
+        <div class="card">
+          <div class="card-header">
+            <div class="title">Add Your Tip</div>
+            <div class="muted">Local-only, saved in your browser</div>
+          </div>
+          <div class="card-body">
+            <form id="addForm">
+              <input id="tipTitle" type="text" placeholder="Short title" required minlength="3" maxlength="80">
+              <textarea id="tipBody" rows="4" placeholder="Describe the tip" required minlength="10" maxlength="240"></textarea>
+              <input id="tipTags" type="text" placeholder="Tags (comma-separated, optional)">
+              <button class="btn primary" type="submit">Add Tip</button>
+              <div class="small">Your tips are stored via localStorage. You can remove them anytime.</div>
+            </form>
+        </div></div>
+
+        <div class="card" style="margin-top:16px">
+          <div class="card-header">
+            <div class="title">About</div>
+          </div>
+          <div class="card-body">
+            <p class="muted">Quick, practical tips for school, health, money, and social life—made by teens for teens.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="footer">© <span id="yr"></span> Teenager Life Tips</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

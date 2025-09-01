@@ -1,0 +1,37 @@
+:root{
+  --bg:#1b130f; --card:#221712; --muted:#a68f84; --txt:#f1e7df; --acc:#c08a5b
+}
+*{box-sizing:border-box} html,body{height:100%}
+body{margin:0;background:linear-gradient(180deg,#1b130f,#120d0a);color:var(--txt);font:16px/1.5 "Inter",system-ui,Segoe UI,Roboto,Arial}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;padding:24px}
+.nav{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:20px}
+.brand{font-weight:800;letter-spacing:.2px}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.col-8{grid-column:span 8} .col-4{grid-column:span 4}
+@media(max-width:960px){.col-8,.col-4{grid-column:1/-1}}
+.card{background:linear-gradient(180deg,#201612,#18110e);border:1px solid #3a2a22;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.card-header{padding:18px 18px 0}
+.card-body{padding:18px}
+.title{font-size:28px;font-weight:800;margin:6px 0}
+.muted{color:var(--muted);font-size:14px}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+input[type=search]{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #3a2a22;background:#140f0c;color:var(--txt)}
+.btn{cursor:pointer;border:1px solid #3a2a22;background:#201612;border-radius:12px;padding:10px 12px;font-weight:600;color:var(--txt)}
+.btn.primary{background:linear-gradient(180deg,var(--acc),#8a5a3a);border:none;color:#fff}
+.btn.ghost{background:transparent}
+.tips{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:720px){.tips{grid-template-columns:1fr}}
+.tip{position:relative;overflow:hidden;border-radius:14px;border:1px solid #3a2a22;background:#15100d}
+.tip .txt{padding:16px 16px 12px}
+.tip h3{margin:0 0 6px;font-size:16px}
+.tip p{margin:0;font-size:14px;color:#f3ede8}
+.tip .meta{display:flex;justify-content:space-between;align-items:center;padding:0 12px 12px}
+.chip{font-size:12px;color:var(--muted)}
+.like{border:none;background:transparent;color:#ffd89a;cursor:pointer;font-weight:700}
+.like.liked{color:#ffb84a}
+.empty{padding:28px;text-align:center;color:var(--muted)}
+form{display:grid;gap:10px}
+textarea,input[type=text]{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #3a2a22;background:#140f0c;color:var(--txt)}
+.small{font-size:12px;color:var(--muted)}
+.footer{margin-top:18px;text-align:center;color:var(--muted);font-size:12px}
